@@ -10,7 +10,7 @@ public class EmployeeController {
         return "This is the testing ";
 
     }
-    @RequestMapping("test1")
+    @RequestMapping("/test1")
     public String test1(){
         return "this is the testing of github ";
     }
