@@ -5,10 +5,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EmployeeController {
+
 	
-	@RequestMapping("/test")
-	public String test() {
-		return "This is the Test";
-	}
+
+    @RequestMapping("/test")
+    public String test(){
+        return "This is the testing ";
+
+    }
+    @RequestMapping("test1")
+    public String test1(){
+        return "this is the testing of github ";
+    }
+
 
 }
