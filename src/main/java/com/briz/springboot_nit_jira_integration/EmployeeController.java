@@ -1,10 +1,14 @@
 package com.briz.springboot_nit_jira_integration;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class EmployeeController {
+    @Autowired
+    EmployeeRepository eerpo;
 
 	
 
@@ -22,6 +26,18 @@ public class EmployeeController {
     {
     	return "hello test";
     }
+    @PostMapping("/save")
+    public String save(@RequestBody Employee emp){
+        eerpo.save(emp);
+        return "Data will be saved";
+
+
+    }
+    @GetMapping("/all")
+    public List<Employee>find(){
+        return eerpo.findAll();
+    }
+
 
 
 }
