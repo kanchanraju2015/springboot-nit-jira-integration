@@ -37,7 +37,10 @@ public class EmployeeController {
     public List<Employee>find(){
         return eerpo.findAll();
     }
-
+ @RequestMapping("/test3")
+    public String test3(){
+        return "this is the testing of jira nad github";
+ }
 
 
 }
